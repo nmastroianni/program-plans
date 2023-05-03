@@ -1,12 +1,37 @@
 import fs from 'fs/promises'
 import path from 'path'
 import { Inter } from 'next/font/google'
+import {
+  FaAtom,
+  FaDivide,
+  FaKey,
+  FaBalanceScale,
+  FaMedal,
+  FaSatelliteDish,
+  FaTheaterMasks,
+} from 'react-icons/fa'
+import { AiFillBank } from 'react-icons/ai'
+import { HiOutlineDesktopComputer } from 'react-icons/hi'
+import { TbLetterD, TbLetterE } from 'react-icons/tb'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home(props) {
   const [program] = props.program
   const { title, terms, slug } = program
+  const icons = {
+    key: FaKey,
+    gmat: FaDivide,
+    tech: HiOutlineDesktopComputer,
+    pe: FaMedal,
+    elective: TbLetterE,
+    gdiv: TbLetterD,
+    gcom: FaSatelliteDish,
+    ghis: AiFillBank,
+    ghum: FaTheaterMasks,
+    gscl: FaAtom,
+    gsoc: FaBalanceScale,
+  }
   return (
     <div className={`${inter.className}`}>
       <header className={`pt-16`}>
@@ -18,7 +43,7 @@ export default function Home(props) {
           Online Educational Plan - 7.5 Week Sessions
         </p>
       </header>
-      <main className={`max-w-screen-xl mx-auto`}>
+      <main className={`max-w-screen-xl mx-auto px-4 xl:px-0`}>
         {terms.length > 0 &&
           terms.map((term, i) => (
             <section key={`${slug}-term-${i}`} className={`py-4`}>
@@ -42,33 +67,48 @@ export default function Home(props) {
                   {term.sessions.length > 0 &&
                     term.sessions.map((session, j) => {
                       return (
-                        <div key={`${slug}-term-${i}-session-${j}`}>
-                          <table className={`w-full`}>
-                            <thead>
-                              <tr className={`sr-only`}>
-                                <th>Key</th>
-                                <th>Course Code</th>
-                                <th>Course Title</th>
-                                <th>Credits</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {session.courses.length > 0 &&
-                                session.courses.map((course, k) => {
-                                  return (
-                                    <tr
-                                      key={`${slug}-term-${i}-session-${j}-course-${k}`}
-                                      className={`border-b`}
-                                    >
-                                      <td className="py-2">{course.icon}</td>
-                                      <td>{course.code}</td>
-                                      <td>{course.title}</td>
-                                      <td>{`${course.credits} cr`}</td>
-                                    </tr>
-                                  )
-                                })}
-                            </tbody>
-                          </table>
+                        <div
+                          key={`${slug}-term-${i}-session-${j}`}
+                          className=""
+                        >
+                          <div>
+                            <h3
+                              className={`text-lg text-center text-ocean-blue lg:hidden border-b border-ocean-blue`}
+                            >
+                              {session.title}
+                            </h3>
+                            <table className={`w-full text-center`}>
+                              <thead>
+                                <tr className={`sr-only`}>
+                                  <th>Key</th>
+                                  <th>Course Code</th>
+                                  <th>Course Title</th>
+                                  <th>Credits</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {session.courses.length > 0 &&
+                                  session.courses.map((course, k) => {
+                                    const Icon = icons[course.icon]
+                                    return (
+                                      <tr
+                                        key={`${slug}-term-${i}-session-${j}-course-${k}`}
+                                        className={`border-b`}
+                                      >
+                                        <td className="w-[5%] py-2">
+                                          <Icon />
+                                        </td>
+                                        <td>{course.code}</td>
+                                        <td className="w-[60%]">
+                                          {course.title}
+                                        </td>
+                                        <td className="w-[10%]">{`${course.credits} cr`}</td>
+                                      </tr>
+                                    )
+                                  })}
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
                       )
                     })}

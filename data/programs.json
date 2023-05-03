@@ -19,7 +19,7 @@
                   "credits": 3
                 },
                 {
-                  "icon": "math",
+                  "icon": "gmat",
                   "code": "MATH161",
                   "title": "College Algebra",
                   "credits": 6
@@ -64,7 +64,7 @@
                   "credits": 3
                 },
                 {
-                  "icon": "math",
+                  "icon": "gmat",
                   "code": "MATH161",
                   "title": "College Algebra",
                   "credits": 6
@@ -81,19 +81,19 @@
               "title": "Session 4",
               "courses": [
                 {
-                  "icon": "key",
+                  "icon": "gsoc",
                   "code": "ENGL151",
                   "title": "English I",
                   "credits": 3
                 },
                 {
-                  "icon": "math",
+                  "icon": "gmat",
                   "code": "MATH161",
                   "title": "College Algebra",
                   "credits": 6
                 },
                 {
-                  "icon": "key",
+                  "icon": "ghis",
                   "code": "STC150",
                   "title": "Student Success Seminar",
                   "credits": 2
