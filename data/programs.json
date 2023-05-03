@@ -1,0 +1,108 @@
+{
+  "title": "Programs List",
+  "programs": [
+    {
+      "title": "Business Administration, A.S.",
+      "slug": "business-administration-as",
+      "credits": 60,
+      "terms": [
+        {
+          "title": "Term 1",
+          "sessions": [
+            {
+              "title": "Session 1",
+              "courses": [
+                {
+                  "icon": "key",
+                  "code": "ENGL151",
+                  "title": "English I",
+                  "credits": 3
+                },
+                {
+                  "icon": "math",
+                  "code": "MATH161",
+                  "title": "College Algebra",
+                  "credits": 6
+                },
+                {
+                  "icon": "key",
+                  "code": "STC150",
+                  "title": "Student Success Seminar",
+                  "credits": 2
+                }
+              ]
+            },
+            {
+              "title": "Session 2",
+              "courses": [
+                {
+                  "icon": "key",
+                  "code": "ENGL152",
+                  "title": "English II",
+                  "credits": 3
+                },
+                {
+                  "icon": "tech",
+                  "code": "CSIT123",
+                  "title": "Integrated",
+                  "credits": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Term 2",
+          "sessions": [
+            {
+              "title": "Session 3",
+              "courses": [
+                {
+                  "icon": "key",
+                  "code": "ENGL151",
+                  "title": "English I",
+                  "credits": 3
+                },
+                {
+                  "icon": "math",
+                  "code": "MATH161",
+                  "title": "College Algebra",
+                  "credits": 6
+                },
+                {
+                  "icon": "key",
+                  "code": "STC150",
+                  "title": "Student Success Seminar",
+                  "credits": 2
+                }
+              ]
+            },
+            {
+              "title": "Session 4",
+              "courses": [
+                {
+                  "icon": "key",
+                  "code": "ENGL151",
+                  "title": "English I",
+                  "credits": 3
+                },
+                {
+                  "icon": "math",
+                  "code": "MATH161",
+                  "title": "College Algebra",
+                  "credits": 6
+                },
+                {
+                  "icon": "key",
+                  "code": "STC150",
+                  "title": "Student Success Seminar",
+                  "credits": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
